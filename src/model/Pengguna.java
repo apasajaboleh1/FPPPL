@@ -84,11 +84,9 @@ public class Pengguna {
             Logger.getLogger(Pengguna.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(Pengguna.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-	
-                
+        }        
     }
+    
     public static boolean updatesaldo(int id_pengguna,int harga,int saldo)
     {
         boolean hasildata=false;
@@ -108,6 +106,7 @@ public class Pengguna {
         }
         return hasildata;
     }
+    
     public static int getsaldo(int id_pengguna)
     {
         int saldo_pengguna = 0;
