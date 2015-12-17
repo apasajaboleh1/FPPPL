@@ -1,0 +1,60 @@
+@startuml
+annotation java.lang.SuppressWarnings
+class com.itextpdf.text.Document
+class com.itextpdf.text.DocumentException
+class com.itextpdf.text.Paragraph
+class com.itextpdf.text.pdf.PdfWriter
+class controller.ControlData
+class etollform.ViewEtool
+class java.sql.Connection
+class java.sql.DriverManager
+class java.sql.PreparedStatement
+class java.sql.ResultSet
+class java.sql.SQLException
+class java.util.Date
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.swing.ButtonGroup
+class javax.swing.JFileChooser
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+class model.Harga_Tol
+class model.History_Pengguna
+class model.Pengguna
+controller.ControlData ..> com.itextpdf.text.Document
+controller.ControlData ..> com.itextpdf.text.DocumentException
+controller.ControlData ..> com.itextpdf.text.Paragraph
+controller.ControlData ..> com.itextpdf.text.pdf.PdfWriter
+controller.ControlData ..> model.Harga_Tol
+controller.ControlData ..> model.History_Pengguna
+controller.ControlData ..> model.Pengguna
+etollform.ViewEtool ..> java.lang.SuppressWarnings
+etollform.ViewEtool ..> controller.ControlData
+etollform.ViewEtool ..> java.util.logging.Level
+etollform.ViewEtool ..> java.util.logging.Logger
+etollform.ViewEtool ..> javax.swing.ButtonGroup
+etollform.ViewEtool ..> javax.swing.JFileChooser
+etollform.ViewEtool --|> javax.swing.JFrame
+etollform.ViewEtool ..> javax.swing.JOptionPane
+model.Harga_Tol ..> java.sql.Connection
+model.Harga_Tol ..> java.sql.DriverManager
+model.Harga_Tol ..> java.sql.PreparedStatement
+model.Harga_Tol ..> java.sql.ResultSet
+model.Harga_Tol ..> java.sql.SQLException
+model.Harga_Tol ..> java.util.logging.Level
+model.Harga_Tol ..> java.util.logging.Logger
+model.History_Pengguna ..> java.sql.Connection
+model.History_Pengguna ..> java.sql.DriverManager
+model.History_Pengguna ..> java.sql.PreparedStatement
+model.History_Pengguna ..> java.sql.SQLException
+model.History_Pengguna ..> java.util.Date
+model.History_Pengguna ..> java.util.logging.Level
+model.History_Pengguna ..> java.util.logging.Logger
+model.Pengguna ..> java.sql.Connection
+model.Pengguna ..> java.sql.DriverManager
+model.Pengguna ..> java.sql.PreparedStatement
+model.Pengguna ..> java.sql.ResultSet
+model.Pengguna ..> java.sql.SQLException
+model.Pengguna ..> java.util.logging.Level
+model.Pengguna ..> java.util.logging.Logger
+@enduml
