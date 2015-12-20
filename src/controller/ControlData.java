@@ -88,7 +88,7 @@ public class ControlData {
         }
         boolean masukdata=History_Transaksi.masukdata(datapengguna[0],datatol[0],dataoperator);
         //4.slesai. ulangi terus.....
-        if(masukdata && (duit-datatol[1])>0)
+        if(masukdata && (duit-datatol[1])>=0)
         {
             hasil="kembalian : "+(duit-datatol[1])+"\npemakaian sebesar : "+datatol[1]+"\ntujuan : "+tujuan+"\nasal : "+asal+"\n";
         }
@@ -127,25 +127,29 @@ public class ControlData {
     public static boolean topup(String input,int saldo)
     {
         boolean hasil=false;
-        hasil=History_topup.topup(input, saldo);
-        Document document = new Document();
-        try
+        if(saldo!=0)
         {
-            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("topup.pdf"));
-            document.open();
-            document.add(new Paragraph("Top Up anda sebesar Rp." + saldo +"\n Telah Berhasil."));
-            document.close();
-            writer.close();
-        } catch (DocumentException ex) {
-            Logger.getLogger(ControlData.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ControlData.class.getName()).log(Level.SEVERE, null, ex);
+            hasil=History_topup.topup(input, saldo);
+            Document document = new Document();
+            try
+            {
+                PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("topup.pdf"));
+                document.open();
+                document.add(new Paragraph("Top Up anda sebesar Rp." + saldo +"\n Telah Berhasil."));
+                document.close();
+                writer.close();
+            } catch (DocumentException ex) {
+                Logger.getLogger(ControlData.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(ControlData.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         return hasil;
     }
     public static boolean updatehargatol(int gol, int harga, String tujuan, String asal)
     {
         boolean hasil=false;
+        if(gol!=0&&harga!=0)
         hasil=Harga_Tol.updateharga(gol, tujuan, asal, harga);
         return hasil;
     }

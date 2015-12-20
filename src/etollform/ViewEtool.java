@@ -1079,6 +1079,7 @@ public class ViewEtool extends javax.swing.JFrame {
         //System.out.println(usrdata+" "+pwddata);
         if(Log)
         {
+            JOptionPane.showMessageDialog(rootPane, "Login Sukses\n");
             menus.setVisible(true);
             login.setVisible(false);
             TopUp.setVisible(false);
@@ -1086,6 +1087,8 @@ public class ViewEtool extends javax.swing.JFrame {
             popup.setVisible(false);
             changedatatol.setVisible(false);
         }
+        else
+            JOptionPane.showMessageDialog(rootPane, "Login Gagal\n");
     }//GEN-LAST:event_LoginActionPerformed
 
     private void TolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TolActionPerformed

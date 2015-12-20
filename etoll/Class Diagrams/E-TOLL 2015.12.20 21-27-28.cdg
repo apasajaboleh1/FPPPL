@@ -30,10 +30,18 @@
           <Argument type="String" name="input"/>
           <Argument type="int" name="saldo"/>
         </Method>
+        <Method name="updatehargatol" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="int" name="gol"/>
+          <Argument type="int" name="harga"/>
+          <Argument type="String" name="tujuan"/>
+          <Argument type="String" name="asal"/>
+        </Method>
       </Methods>
     </Class>
     <Class name="ViewEtool" package="etollform" visibility="public" xPosition="320.0" yPosition="20.0">
       <Fields>
+        <Field name="harga" type="int" visibility="private"/>
+        <Field name="golongan" type="int" visibility="private"/>
         <Field name="saldotopup" type="int" visibility="private"/>
         <Field name="pwddata" type="String" visibility="private"/>
         <Field name="usrdata" type="String" visibility="private"/>
@@ -45,9 +53,12 @@
         <Field name="kategori" type="boolean[]" visibility="private"/>
         <Field name="Login" type="javax.swing.JButton" visibility="private"/>
         <Field name="Text1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="Text2" type="javax.swing.JTextField" visibility="private"/>
         <Field name="Tol" type="javax.swing.JButton" visibility="private"/>
         <Field name="TopUp" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="UbahDataTol" type="javax.swing.JButton" visibility="private"/>
         <Field name="byr_tunai" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="changedatatol" type="javax.swing.JPanel" visibility="private"/>
         <Field name="fileChooser" type="javax.swing.JFileChooser" visibility="private"/>
         <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
         <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
@@ -56,7 +67,13 @@
         <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
         <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
         <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton9" type="javax.swing.JButton" visibility="private"/>
         <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
@@ -64,24 +81,45 @@
         <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
         <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
         <Field name="jToggleButton2" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="jToggleButton3" type="javax.swing.JToggleButton" visibility="private"/>
         <Field name="login" type="javax.swing.JPanel" visibility="private"/>
         <Field name="menus" type="javax.swing.JPanel" visibility="private"/>
         <Field name="mobilkecil" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="mobilkecil2" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="openfile" type="javax.swing.JButton" visibility="private"/>
+        <Field name="p1" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="p2" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="p3" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="p4" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="popup" type="javax.swing.JPanel" visibility="private"/>
         <Field name="prosesdata" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="prosesdata1" type="javax.swing.JToggleButton" visibility="private"/>
         <Field name="prosesdatatopup" type="javax.swing.JButton" visibility="private"/>
+        <Field name="s1" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="s2" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="s3" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="s4" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="text2" type="javax.swing.JTextField" visibility="private"/>
         <Field name="topup" type="javax.swing.JButton" visibility="private"/>
         <Field name="truk2gardan" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="truk2gardan2" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="truk3gardan" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="truk3gardan2" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="truk4gardan" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="truk4gardan2" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="truk5gardan" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="truk5gardan2" type="javax.swing.JRadioButton" visibility="private"/>
         <Field name="userid" type="javax.swing.JTextField" visibility="private"/>
         <Field name="userpass" type="javax.swing.JPasswordField" visibility="private"/>
         <Field name="utama" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="utama1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="w1" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="w2" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="w3" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="w4" type="javax.swing.JRadioButton" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
@@ -166,10 +204,81 @@ void" visibility="private"/>
         <Method name="jButton7ActionPerformed" returnType="void" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
+        <Method name="s1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="w1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="p1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="s2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="w2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="p2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Text2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mobilkecil2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="truk2gardan2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="truk4gardan2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="truk5gardan2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="truk3gardan2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="prosesdata1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jToggleButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton9ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="s3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="w3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="p3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="s4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="w4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="p4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="UbahDataTolActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
         <Method name="main" returnType="void" visibility="public" isStatic="true">
           <Argument type="String" name="args"/>
         </Method>
         <Method name="groupButton" returnType="void" visibility="private"/>
+        <Method name="groupButton1" returnType="void" visibility="private"/>
+        <Method name="groupButton2" returnType="void" visibility="private"/>
+        <Method name="groupButton3" returnType="void" visibility="private"/>
+        <Method name="groupButton4" returnType="void" visibility="private"/>
+        <Method name="groupButton5" returnType="void" visibility="private"/>
       </Methods>
     </Class>
     <Class name="Harga_Tol" package="model" visibility="public" xPosition="620.0" yPosition="20.0">
@@ -184,6 +293,12 @@ void" visibility="private"/>
           <Argument type="int" name="data"/>
           <Argument type="String" name="tujuan"/>
           <Argument type="String" name="asal"/>
+        </Method>
+        <Method name="updateharga" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="int" name="gol"/>
+          <Argument type="String" name="tujuan"/>
+          <Argument type="String" name="asal"/>
+          <Argument type="int" name="harga"/>
         </Method>
       </Methods>
     </Class>
