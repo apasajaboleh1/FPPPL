@@ -10,6 +10,8 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.Harga_Tol;
 import model.History_Transaksi;
 import model.History_topup;
@@ -126,6 +128,25 @@ public class ControlData {
     {
         boolean hasil=false;
         hasil=History_topup.topup(input, saldo);
+        Document document = new Document();
+        try
+        {
+            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("topup.pdf"));
+            document.open();
+            document.add(new Paragraph("Top Up anda sebesar Rp." + saldo +"\n Telah Berhasil."));
+            document.close();
+            writer.close();
+        } catch (DocumentException ex) {
+            Logger.getLogger(ControlData.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ControlData.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return hasil;
+    }
+    public static boolean updatehargatol(int gol, int harga, String tujuan, String asal)
+    {
+        boolean hasil=false;
+        hasil=Harga_Tol.updateharga(gol, tujuan, asal, harga);
         return hasil;
     }
 }

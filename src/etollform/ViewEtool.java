@@ -23,12 +23,20 @@ public class ViewEtool extends javax.swing.JFrame {
     public ViewEtool() {
         initComponents();
         groupButton();
+        groupButton2();
+        groupButton1();
+        groupButton3();
+        groupButton4();
+        groupButton5();
         menus.setVisible(false);
         login.setVisible(true);
         TopUp.setVisible(false);
         utama.setVisible(false);
         popup.setVisible(false);
+        changedatatol.setVisible(false);
     }
+    private int harga;
+    private int golongan=0;
     private int saldotopup;
     private String pwddata;
     private String usrdata;
@@ -80,6 +88,14 @@ public class ViewEtool extends javax.swing.JFrame {
         prosesdata = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
         jButton7 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        s1 = new javax.swing.JRadioButton();
+        w1 = new javax.swing.JRadioButton();
+        p1 = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        s2 = new javax.swing.JRadioButton();
+        w2 = new javax.swing.JRadioButton();
+        p2 = new javax.swing.JRadioButton();
         login = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -90,6 +106,7 @@ public class ViewEtool extends javax.swing.JFrame {
         Tol = new javax.swing.JButton();
         topup = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        UbahDataTol = new javax.swing.JButton();
         TopUp = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -99,6 +116,27 @@ public class ViewEtool extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         openfile = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        changedatatol = new javax.swing.JPanel();
+        utama1 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        Text2 = new javax.swing.JTextField();
+        mobilkecil2 = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
+        truk2gardan2 = new javax.swing.JRadioButton();
+        truk4gardan2 = new javax.swing.JRadioButton();
+        truk5gardan2 = new javax.swing.JRadioButton();
+        truk3gardan2 = new javax.swing.JRadioButton();
+        prosesdata1 = new javax.swing.JToggleButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jButton9 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        s3 = new javax.swing.JRadioButton();
+        w3 = new javax.swing.JRadioButton();
+        p3 = new javax.swing.JRadioButton();
+        jLabel14 = new javax.swing.JLabel();
+        s4 = new javax.swing.JRadioButton();
+        w4 = new javax.swing.JRadioButton();
+        p4 = new javax.swing.JRadioButton();
 
         jLabel6.setText("jLabel6");
 
@@ -231,18 +269,86 @@ public class ViewEtool extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setText("Asal :");
+
+        s1.setText("Sidoarjo");
+        s1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s1ActionPerformed(evt);
+            }
+        });
+
+        w1.setText("Waru");
+        w1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                w1ActionPerformed(evt);
+            }
+        });
+
+        p1.setText("Porong");
+        p1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p1ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Tujuan :");
+
+        s2.setText("Sidoarjo");
+        s2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s2ActionPerformed(evt);
+            }
+        });
+
+        w2.setText("Waru");
+        w2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                w2ActionPerformed(evt);
+            }
+        });
+
+        p2.setText("Porong");
+        p2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout utamaLayout = new javax.swing.GroupLayout(utama);
         utama.setLayout(utamaLayout);
         utamaLayout.setHorizontalGroup(
             utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(utamaLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(prosesdata)
-                .addGap(43, 43, 43)
-                .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jToggleButton2)
-                .addGap(46, 46, 46))
+                .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(utamaLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(s1)
+                            .addComponent(prosesdata)
+                            .addComponent(s2))
+                        .addGap(39, 39, 39)
+                        .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(utamaLayout.createSequentialGroup()
+                                .addComponent(jButton7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jToggleButton2))
+                            .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(utamaLayout.createSequentialGroup()
+                                    .addComponent(w2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(p2))
+                                .addGroup(utamaLayout.createSequentialGroup()
+                                    .addComponent(w1)
+                                    .addGap(27, 27, 27)
+                                    .addComponent(p1)))))
+                    .addGroup(utamaLayout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(jLabel9))
+                    .addGroup(utamaLayout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(jLabel10)))
+                .addGap(0, 120, Short.MAX_VALUE))
             .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(utamaLayout.createSequentialGroup()
                     .addContainerGap()
@@ -272,12 +378,26 @@ public class ViewEtool extends javax.swing.JFrame {
         utamaLayout.setVerticalGroup(
             utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utamaLayout.createSequentialGroup()
-                .addContainerGap(185, Short.MAX_VALUE)
+                .addContainerGap(142, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(s1)
+                    .addComponent(w1)
+                    .addComponent(p1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(w2)
+                    .addComponent(p2)
+                    .addComponent(s2))
+                .addGap(8, 8, 8)
+                .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7)
                     .addComponent(prosesdata)
-                    .addComponent(jToggleButton2)
-                    .addComponent(jButton7))
-                .addGap(61, 61, 61))
+                    .addComponent(jToggleButton2))
+                .addContainerGap())
             .addGroup(utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(utamaLayout.createSequentialGroup()
                     .addContainerGap()
@@ -378,6 +498,13 @@ public class ViewEtool extends javax.swing.JFrame {
             }
         });
 
+        UbahDataTol.setText("Ubah Data Tol");
+        UbahDataTol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UbahDataTolActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout menusLayout = new javax.swing.GroupLayout(menus);
         menus.setLayout(menusLayout);
         menusLayout.setHorizontalGroup(
@@ -385,10 +512,11 @@ public class ViewEtool extends javax.swing.JFrame {
             .addGroup(menusLayout.createSequentialGroup()
                 .addGap(162, 162, 162)
                 .addGroup(menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(UbahDataTol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(topup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Tol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(168, Short.MAX_VALUE))
+                    .addComponent(Tol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
         menusLayout.setVerticalGroup(
             menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -397,9 +525,11 @@ public class ViewEtool extends javax.swing.JFrame {
                 .addComponent(Tol)
                 .addGap(31, 31, 31)
                 .addComponent(topup)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(UbahDataTol)
                 .addGap(38, 38, 38)
                 .addComponent(jButton6)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
         );
 
         jLabel7.setText("Barcode Data :");
@@ -491,11 +621,245 @@ public class ViewEtool extends javax.swing.JFrame {
                 .addGap(29, 29, 29))
         );
 
+        jLabel11.setText("Harga : ");
+
+        Text2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Text2ActionPerformed(evt);
+            }
+        });
+
+        mobilkecil2.setText("Sedan,Jip,Pickup,Truk Kecil,Bus");
+        mobilkecil2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mobilkecil2ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Kategori Mobil :");
+
+        truk2gardan2.setText("Truk dengan 2 gardan");
+        truk2gardan2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                truk2gardan2ActionPerformed(evt);
+            }
+        });
+
+        truk4gardan2.setText("Truk dengan 4 gardan");
+        truk4gardan2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                truk4gardan2ActionPerformed(evt);
+            }
+        });
+
+        truk5gardan2.setText("Truk dengan 5 gardan");
+        truk5gardan2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                truk5gardan2ActionPerformed(evt);
+            }
+        });
+
+        truk3gardan2.setText("Truk dengan 3 gardan");
+        truk3gardan2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                truk3gardan2ActionPerformed(evt);
+            }
+        });
+
+        prosesdata1.setText("Proses");
+        prosesdata1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prosesdata1ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton3.setText("Exit");
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("Menu Utama");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("Asal :");
+
+        s3.setText("Sidoarjo");
+        s3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s3ActionPerformed(evt);
+            }
+        });
+
+        w3.setText("Waru");
+        w3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                w3ActionPerformed(evt);
+            }
+        });
+
+        p3.setText("Porong");
+        p3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p3ActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setText("Tujuan :");
+
+        s4.setText("Sidoarjo");
+        s4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                s4ActionPerformed(evt);
+            }
+        });
+
+        w4.setText("Waru");
+        w4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                w4ActionPerformed(evt);
+            }
+        });
+
+        p4.setText("Porong");
+        p4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout utama1Layout = new javax.swing.GroupLayout(utama1);
+        utama1.setLayout(utama1Layout);
+        utama1Layout.setHorizontalGroup(
+            utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(utama1Layout.createSequentialGroup()
+                .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(utama1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(s3)
+                            .addComponent(prosesdata1)
+                            .addComponent(s4))
+                        .addGap(39, 39, 39)
+                        .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(utama1Layout.createSequentialGroup()
+                                .addGap(91, 91, 91)
+                                .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(truk5gardan2)
+                                    .addComponent(truk4gardan2)))
+                            .addGroup(utama1Layout.createSequentialGroup()
+                                .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(utama1Layout.createSequentialGroup()
+                                        .addComponent(jButton9)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(utama1Layout.createSequentialGroup()
+                                        .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(w4)
+                                            .addComponent(w3))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(p3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(p4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jToggleButton3, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(23, 23, 23))))
+                    .addGroup(utama1Layout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(jLabel13))
+                    .addGroup(utama1Layout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(jLabel14)))
+                .addGap(0, 38, Short.MAX_VALUE))
+            .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(utama1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utama1Layout.createSequentialGroup()
+                            .addComponent(jLabel11)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(Text2)
+                            .addGap(77, 77, 77))
+                        .addGroup(utama1Layout.createSequentialGroup()
+                            .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(truk3gardan2)
+                                .addComponent(mobilkecil2)
+                                .addGroup(utama1Layout.createSequentialGroup()
+                                    .addGap(137, 137, 137)
+                                    .addComponent(jLabel12))
+                                .addComponent(truk2gardan2))
+                            .addGap(0, 180, Short.MAX_VALUE)))
+                    .addContainerGap()))
+        );
+        utama1Layout.setVerticalGroup(
+            utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utama1Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(truk4gardan2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(truk5gardan2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(s3)
+                    .addComponent(w3)
+                    .addComponent(p3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(w4)
+                    .addComponent(p4)
+                    .addComponent(s4))
+                .addGap(8, 8, 8)
+                .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton9)
+                    .addComponent(prosesdata1)
+                    .addComponent(jToggleButton3))
+                .addContainerGap())
+            .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(utama1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(utama1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(Text2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addComponent(jLabel12)
+                    .addGap(5, 5, 5)
+                    .addComponent(mobilkecil2)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(truk2gardan2)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(truk3gardan2)
+                    .addContainerGap(148, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout changedatatolLayout = new javax.swing.GroupLayout(changedatatol);
+        changedatatol.setLayout(changedatatolLayout);
+        changedatatolLayout.setHorizontalGroup(
+            changedatatolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 397, Short.MAX_VALUE)
+            .addGroup(changedatatolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(changedatatolLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(utama1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        changedatatolLayout.setVerticalGroup(
+            changedatatolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 291, Short.MAX_VALUE)
+            .addGroup(changedatatolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(utama1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 464, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -520,6 +884,11 @@ public class ViewEtool extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(TopUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(changedatatol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -549,6 +918,11 @@ public class ViewEtool extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(TopUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(changedatatol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -629,6 +1003,7 @@ public class ViewEtool extends javax.swing.JFrame {
                         TopUp.setVisible(false);
                         utama.setVisible(false);
                         popup.setVisible(true);
+                        changedatatol.setVisible(false);
                     }
                 }
                 else
@@ -669,6 +1044,7 @@ public class ViewEtool extends javax.swing.JFrame {
                     TopUp.setVisible(false);
                     utama.setVisible(true);
                     popup.setVisible(false);
+                    changedatatol.setVisible(false);
                 }   
             }
             
@@ -686,6 +1062,7 @@ public class ViewEtool extends javax.swing.JFrame {
         TopUp.setVisible(false);
         utama.setVisible(true);
         popup.setVisible(false);
+        changedatatol.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void userpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userpassActionPerformed
@@ -707,7 +1084,7 @@ public class ViewEtool extends javax.swing.JFrame {
             TopUp.setVisible(false);
             utama.setVisible(false);
             popup.setVisible(false);
-            System.out.println("a");
+            changedatatol.setVisible(false);
         }
     }//GEN-LAST:event_LoginActionPerformed
 
@@ -717,6 +1094,7 @@ public class ViewEtool extends javax.swing.JFrame {
         TopUp.setVisible(false);
         utama.setVisible(true);
         popup.setVisible(false);
+        changedatatol.setVisible(false);
     }//GEN-LAST:event_TolActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -729,6 +1107,7 @@ public class ViewEtool extends javax.swing.JFrame {
         TopUp.setVisible(true);
         utama.setVisible(false);
         popup.setVisible(false);
+        changedatatol.setVisible(false);
     }//GEN-LAST:event_topupActionPerformed
 
     private void text2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text2ActionPerformed
@@ -759,6 +1138,10 @@ public class ViewEtool extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(rootPane, "Top Up Berhasil");
         }
+        else
+        {
+            JOptionPane.showMessageDialog(rootPane, "Top Up Gagal");
+        }
     }//GEN-LAST:event_prosesdatatopupActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -767,6 +1150,7 @@ public class ViewEtool extends javax.swing.JFrame {
         TopUp.setVisible(false);
         utama.setVisible(false);
         popup.setVisible(false);
+        changedatatol.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -775,7 +1159,193 @@ public class ViewEtool extends javax.swing.JFrame {
         TopUp.setVisible(false);
         utama.setVisible(false);
         popup.setVisible(false);
+        changedatatol.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s1ActionPerformed
+        if(s1.isSelected())
+        {
+            asal="Sidoarjo";
+        }
+        else
+        {
+            asal="Waru";
+        }
+    }//GEN-LAST:event_s1ActionPerformed
+
+    private void w1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_w1ActionPerformed
+        if(w1.isSelected())
+        {
+            asal="Waru";
+        }
+    }//GEN-LAST:event_w1ActionPerformed
+
+    private void p1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p1ActionPerformed
+        if(p1.isSelected())
+        {
+            asal="Porong";
+        }
+        else
+            asal="Waru";
+    }//GEN-LAST:event_p1ActionPerformed
+
+    private void s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s2ActionPerformed
+        if(s2.isSelected())
+        {
+            tujuan ="Sidoarjo";
+        }
+        else tujuan="Porong";
+    }//GEN-LAST:event_s2ActionPerformed
+
+    private void w2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_w2ActionPerformed
+        if(w2.isSelected())
+        {
+            tujuan="Waru";
+        }
+        else
+             tujuan="Porong";
+    }//GEN-LAST:event_w2ActionPerformed
+
+    private void p2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2ActionPerformed
+        if(p2.isSelected())
+        {
+            tujuan="Porong";
+        }
+        else
+            tujuan="Porong";
+    }//GEN-LAST:event_p2ActionPerformed
+
+    private void Text2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text2ActionPerformed
+        harga= Integer.parseInt(Text2.getText());
+    }//GEN-LAST:event_Text2ActionPerformed
+
+    private void mobilkecil2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mobilkecil2ActionPerformed
+        if(mobilkecil2.isSelected())
+        {
+            golongan=1;
+        }
+        else golongan=0;
+    }//GEN-LAST:event_mobilkecil2ActionPerformed
+
+    private void truk2gardan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_truk2gardan2ActionPerformed
+        if(truk2gardan2.isSelected())
+        {
+            golongan=2;
+        }
+        else golongan=0;
+    }//GEN-LAST:event_truk2gardan2ActionPerformed
+
+    private void truk4gardan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_truk4gardan2ActionPerformed
+        if(truk4gardan2.isSelected())
+        {
+            golongan=4;
+        }
+        else golongan=0;
+    }//GEN-LAST:event_truk4gardan2ActionPerformed
+
+    private void truk5gardan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_truk5gardan2ActionPerformed
+        if(truk5gardan2.isSelected())
+        {
+            golongan=5;
+        }
+        else golongan=0;
+    }//GEN-LAST:event_truk5gardan2ActionPerformed
+
+    private void truk3gardan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_truk3gardan2ActionPerformed
+        if(truk3gardan2.isSelected())
+        {
+            golongan=3;
+        }
+        else golongan=0;
+    }//GEN-LAST:event_truk3gardan2ActionPerformed
+
+    private void prosesdata1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosesdata1ActionPerformed
+        boolean hasilolahdata=false;
+        hasilolahdata=ControlData.updatehargatol(golongan, harga, tujuan, asal);
+        if(hasilolahdata==true)
+        {
+            JOptionPane.showMessageDialog(rootPane, "Update Sukses\n");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(rootPane, "Update Failed\n");
+        }
+    }//GEN-LAST:event_prosesdata1ActionPerformed
+
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        System.exit(1);
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        menus.setVisible(true);
+        login.setVisible(false);
+        TopUp.setVisible(false);
+        utama.setVisible(false);
+        popup.setVisible(false);
+        changedatatol.setVisible(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void s3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s3ActionPerformed
+       if(s3.isSelected())
+        {
+            asal="Sidoarjo";
+        }
+        else
+        {
+            asal="Waru";
+        }
+    }//GEN-LAST:event_s3ActionPerformed
+
+    private void w3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_w3ActionPerformed
+        if(w3.isSelected())
+        {
+            asal="Waru";
+        }
+    }//GEN-LAST:event_w3ActionPerformed
+
+    private void p3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p3ActionPerformed
+        if(p3.isSelected())
+        {
+            asal="Porong";
+        }
+        else
+            asal="Waru";
+    }//GEN-LAST:event_p3ActionPerformed
+
+    private void s4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s4ActionPerformed
+        if(s4.isSelected())
+        {
+            tujuan ="Sidoarjo";
+        }
+        else tujuan="Porong";
+    }//GEN-LAST:event_s4ActionPerformed
+
+    private void w4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_w4ActionPerformed
+        if(w4.isSelected())
+        {
+            tujuan="Waru";
+        }
+        else
+             tujuan="Porong";
+    }//GEN-LAST:event_w4ActionPerformed
+
+    private void p4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p4ActionPerformed
+        if(p4.isSelected())
+        {
+            tujuan="Porong";
+        }
+        else
+            tujuan="Porong";
+    }//GEN-LAST:event_p4ActionPerformed
+
+    private void UbahDataTolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UbahDataTolActionPerformed
+        menus.setVisible(false);
+        login.setVisible(false);
+        TopUp.setVisible(false);
+        utama.setVisible(false);
+        popup.setVisible(false);
+        changedatatol.setVisible(true);
+    }//GEN-LAST:event_UbahDataTolActionPerformed
 
     /**
      * @param args the command line arguments
@@ -820,12 +1390,52 @@ public class ViewEtool extends javax.swing.JFrame {
         bg1.add(truk5gardan);
         bg1.add(mobilkecil);
     }
+    private void groupButton1()
+    {
+        ButtonGroup bg2= new ButtonGroup();
+        bg2.add(p1);
+        bg2.add(w1);
+        bg2.add(s1);
+    }
+    private void groupButton2()
+    {
+        ButtonGroup bg3= new ButtonGroup();
+        bg3.add(p2);
+        bg3.add(w2);
+        bg3.add(s2);
+    }
+    private void groupButton3()
+    {
+        ButtonGroup bg4= new ButtonGroup();
+        bg4.add(p3);
+        bg4.add(w3);
+        bg4.add(s3);
+    }
+    private void groupButton4()
+    {
+        ButtonGroup bg5= new ButtonGroup();
+        bg5.add(p4);
+        bg5.add(w4);
+        bg5.add(s4);
+    }
+    private void groupButton5()
+    {
+        ButtonGroup bg6=new ButtonGroup();
+        bg6.add(truk2gardan2);
+        bg6.add(truk3gardan2);
+        bg6.add(truk4gardan2);
+        bg6.add(truk5gardan2);
+        bg6.add(mobilkecil2);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Login;
     private javax.swing.JTextField Text1;
+    private javax.swing.JTextField Text2;
     private javax.swing.JButton Tol;
     private javax.swing.JPanel TopUp;
+    private javax.swing.JButton UbahDataTol;
     private javax.swing.JTextField byr_tunai;
+    private javax.swing.JPanel changedatatol;
     private javax.swing.JFileChooser fileChooser;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -834,7 +1444,13 @@ public class ViewEtool extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -842,23 +1458,44 @@ public class ViewEtool extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JPanel login;
     private javax.swing.JPanel menus;
     private javax.swing.JRadioButton mobilkecil;
+    private javax.swing.JRadioButton mobilkecil2;
     private javax.swing.JButton openfile;
+    private javax.swing.JRadioButton p1;
+    private javax.swing.JRadioButton p2;
+    private javax.swing.JRadioButton p3;
+    private javax.swing.JRadioButton p4;
     private javax.swing.JPanel popup;
     private javax.swing.JToggleButton prosesdata;
+    private javax.swing.JToggleButton prosesdata1;
     private javax.swing.JButton prosesdatatopup;
+    private javax.swing.JRadioButton s1;
+    private javax.swing.JRadioButton s2;
+    private javax.swing.JRadioButton s3;
+    private javax.swing.JRadioButton s4;
     private javax.swing.JTextField text2;
     private javax.swing.JButton topup;
     private javax.swing.JRadioButton truk2gardan;
+    private javax.swing.JRadioButton truk2gardan2;
     private javax.swing.JRadioButton truk3gardan;
+    private javax.swing.JRadioButton truk3gardan2;
     private javax.swing.JRadioButton truk4gardan;
+    private javax.swing.JRadioButton truk4gardan2;
     private javax.swing.JRadioButton truk5gardan;
+    private javax.swing.JRadioButton truk5gardan2;
     private javax.swing.JTextField userid;
     private javax.swing.JPasswordField userpass;
     private javax.swing.JPanel utama;
+    private javax.swing.JPanel utama1;
+    private javax.swing.JRadioButton w1;
+    private javax.swing.JRadioButton w2;
+    private javax.swing.JRadioButton w3;
+    private javax.swing.JRadioButton w4;
     // End of variables declaration//GEN-END:variables
 }

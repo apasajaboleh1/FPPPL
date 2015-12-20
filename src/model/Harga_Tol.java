@@ -45,4 +45,25 @@ public class Harga_Tol {
         
         return hasildata;
     }
+    public static boolean updateharga(int gol,String tujuan,String asal,int harga)
+    {
+        boolean hasil=false;
+        try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
+            String sql="update harga_tol set harga=? where golongan=? and tujuan=? and asal=?";
+            PreparedStatement statement=conn.prepareStatement(sql);
+            statement.setInt(1, harga);
+            statement.setInt(2,gol);
+            statement.setString(3, tujuan);
+            statement.setString(4, asal);
+            int rowsInserted = statement.executeUpdate();
+                if (rowsInserted > 0)
+                {
+                    hasil=true;
+                    //System.out.println("A new user was inserted successfully!");
+                }
+        } catch (SQLException ex) {
+            Logger.getLogger(Harga_Tol.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return hasil;
+    }
 }
